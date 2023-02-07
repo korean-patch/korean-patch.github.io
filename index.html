@@ -1,6 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>한글 패치 제작소</title>
+    <style>
+      @font-face {
+        font-family: "Noto Sans KR";
+        font-weight: 100;
+        src: url("https://korean-patch.github.io/Noto_Sans_KR/NotoSansKR-Thin.otf");
+      }
+
+      @font-face {
+        font-family: "Noto Sans KR";
+        font-weight: 300;
+        src: url("https://korean-patch.github.io/Noto_Sans_KR/NotoSansKR-Light.otf");
+      }
+
+      @font-face {
+        font-family: "Noto Sans KR";
+        font-weight: 400;
+        src: url("https://korean-patch.github.io/Noto_Sans_KR/NotoSansKR-Regular.otf");
+      }
+
+      @font-face {
+        font-family: "Noto Sans KR";
+        font-weight: 500;
+        src: url("https://korean-patch.github.io/Noto_Sans_KR/NotoSansKR-Medium.otf");
+      }
+
+      @font-face {
+        font-family: "Noto Sans KR";
+        font-weight: 700;
+        src: url("https://korean-patch.github.io/Noto_Sans_KR/NotoSansKR-Bold.otf");
+      }
+
+      @font-face {
+        font-family: "Noto Sans KR";
+        font-weight: 900;
+        src: url("https://korean-patch.github.io/Noto_Sans_KR/NotoSansKR-Black.otf");
+      }
+
+      body {
+        align-items: center;
+        background-color: #111111;
+        color: #eeeeee;
+        display: grid;
+        font-family: "Noto Sans KR";
+        height: 100vh;
+        justify-items: center;
+        margin: 0;
+      }
+
+      .main-panel {
+        background-color: #222222;
+        border-radius: 1em;
+        display: grid;
+        gap: 1em;
+        justify-items: center;
+        padding-bottom: 5em;
+        padding-left: 5em;
+        padding-right: 5em;
+        padding-top: 1em;
+      }
+
+      .cards {
+        display: grid;
+        gap: 5em;
+        grid-auto-flow: column;
+      }
+
+      .card {
+        background-color: #333333;
+        border-radius: 1em;
+      }
+    </style>
   </head>
+  <body>
+    <div class="main-panel">
+      <h1>한글 패치 제작소</h1>
+      <div class="cards">
+        <div class="card">
+          <div class="card-image">Image goes here</div>
+          <div class="card-title">Final Fantasy XIV</div>
+        </div>
+        <div class="card">
+          <div class="card-image">Image goes here</div>
+          <div class="card-title">Final Fantasy XIV</div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
