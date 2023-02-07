@@ -59,7 +59,6 @@
         box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.5),
           -2.5px -2.5px 10px rgba(0, 0, 0, 0.5);
         display: grid;
-        gap: 2.5em;
         justify-items: center;
         padding-bottom: 5em;
         padding-left: 5em;
@@ -67,13 +66,45 @@
         padding-top: 1em;
       }
 
+      .instruction-section {
+        display: grid;
+        gap: 1em;
+        justify-items: center;
+      }
+
       .instruction {
         color: #aaaaaa;
       }
 
+      .discord-button {
+        background-color: #5865f2;
+        border-radius: 0.25em;
+        box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.1),
+          -2.5px -2.5px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin-bottom: 2.5em;
+        padding-bottom: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.5em;
+      }
+
+      .discord-button:hover {
+        filter: brightness(75%);
+      }
+
+      .discord-image {
+        background-image: url("https://korean-patch.github.io/images/discord-logo-white.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 7.5em;
+        height: 2em;
+        width: 7.5em;
+      }
+
       .cards {
         display: grid;
-        gap: 5em;
+        gap: 2.5em;
       }
 
       .card {
@@ -104,6 +135,7 @@
 
       .card-image {
         background-position: center;
+        background-repeat: no-repeat;
         background-size: 25em;
         transition: all 0.5s;
         width: 25em;
@@ -135,7 +167,16 @@
   <body>
     <div class="main-panel">
       <h1>한글 패치 제작소</h1>
-      <div class="instruction">※ 문의사항은 디스코드로 부탁드려요.</div>
+      <div class="instruction-section">
+        <div class="instruction">※ 문의사항은 디스코드로 부탁드려요.</div>
+        <a
+          class="discord-button"
+          href="https://discord.gg/MgkksjWbh5"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><div class="discord-image"></div
+        ></a>
+      </div>
       <div class="cards">
         <a
           class="card"
