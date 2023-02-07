@@ -45,6 +45,7 @@
         align-items: center;
         background-color: #111111;
         color: #eeeeee;
+        cursor: default;
         display: grid;
         font-family: "Noto Sans KR";
         height: 100vh;
@@ -55,8 +56,10 @@
       .main-panel {
         background-color: #222222;
         border-radius: 1em;
+        box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.5),
+          -2.5px -2.5px 10px rgba(0, 0, 0, 0.5);
         display: grid;
-        gap: 1em;
+        gap: 2.5em;
         justify-items: center;
         padding-bottom: 5em;
         padding-left: 5em;
@@ -64,30 +67,96 @@
         padding-top: 1em;
       }
 
+      .instruction {
+        color: #aaaaaa;
+      }
+
       .cards {
         display: grid;
         gap: 5em;
-        grid-auto-flow: column;
       }
 
       .card {
         background-color: #333333;
         border-radius: 1em;
+        box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.1),
+          -2.5px -2.5px 10px rgba(0, 0, 0, 0.1);
+        color: #eeeeee;
+        cursor: pointer;
+        overflow: hidden;
+        text-decoration: none;
+        transition: all 0.5s;
+      }
+
+      .card:hover {
+        filter: brightness(75%);
+      }
+
+      .card-title {
+        text-align: center;
+        margin: -0.5em;
+      }
+
+      .card-image-container {
+        overflow: hidden;
+        width: 25em;
+      }
+
+      .card-image {
+        background-position: center;
+        background-size: 25em;
+        transition: all 0.5s;
+        width: 25em;
+      }
+
+      .card:hover .card-image-container .card-image {
+        transform: scale(1.1);
+      }
+
+      .container-ffxiv {
+        height: 10.2em;
+      }
+
+      .image-ffxiv {
+        background-image: url("https://korean-patch.github.io/images/ffxiv.jpg");
+        height: 10.2em;
+      }
+
+      .container-lost-ark {
+        height: 11.8em;
+      }
+
+      .image-lost-ark {
+        background-image: url("https://korean-patch.github.io/images/lost-ark.jpg");
+        height: 11.8em;
       }
     </style>
   </head>
   <body>
     <div class="main-panel">
       <h1>한글 패치 제작소</h1>
+      <div class="instruction">※ 문의사항은 디스코드로 부탁드려요.</div>
       <div class="cards">
-        <div class="card">
-          <div class="card-image">Image goes here</div>
-          <div class="card-title">Final Fantasy XIV</div>
-        </div>
-        <div class="card">
-          <div class="card-image">Image goes here</div>
-          <div class="card-title">Final Fantasy XIV</div>
-        </div>
+        <a
+          class="card"
+          href="https://korean-patch.github.io/ffxiv-korean-patch"
+        >
+          <div class="card-image-container container-ffxiv">
+            <div class="card-image image-ffxiv"></div>
+          </div>
+          <div class="card-title">
+            <h3>Final Fantasy XIV</h3>
+          </div>
+        </a>
+        <a
+          class="card"
+          href="https://korean-patch.github.io/lost-ark-korean-patch"
+        >
+          <div class="card-image-container container-lost-ark">
+            <div class="card-image image-lost-ark"></div>
+          </div>
+          <div class="card-title"><h3>Lost Ark (Steam)</h3></div>
+        </a>
       </div>
     </div>
   </body>
